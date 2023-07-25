@@ -76,8 +76,10 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-The p-value from the chi-square is 0000001.242 is so small that we reject the null hypothesis meaning the vaccine is effective in preventing aids among drug users. The fisher exact test shows that the p-value 00000004.23 making us reject the null hypothesis. The odds ratio of getting is 0.35 times likely than someone who gets the placebo, the answer remains the same.
+The p-value from the chi-square is .0000001242 is so small that we reject the null hypothesis meaning the vaccine is effective in preventing aids among drug users. The fisher exact test shows that the p-value .0000000423 making us reject the null hypothesis. The odds ratio of getting is 0.35 times likely than someone who gets the placebo, the answer remains the same.
 
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+
+To restate the question: Is the vaccine able to help prevent aids among those who are drug users, and based off the research we have conducted, the people who received the placebo showed high percentages of people infected with aids, and those who received the vaccine had a smaller amount of people infected with aids. Therefore, the vaccine is effective in preventing aids in those who are drug users.
