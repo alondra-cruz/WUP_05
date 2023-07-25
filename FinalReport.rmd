@@ -62,7 +62,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
-Among those who got aids, the ones who received the placebo had a significant higher amount of people are infected with aids than those who received the drug. 
+Among those who got aids, 75% of people who received the placebo were infected and the ones who consumed the drug only had 24% of people infected with aids.  
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
