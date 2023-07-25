@@ -8,6 +8,7 @@ output: html_document
 ```{r include=FALSE,echo=FALSE}
 require(tidyverse)
 require(tigerstats)
+require(dplyr)
 triUmp <-read.csv(file="triUmpsal.csv",header=TRUE)
 ```
 
@@ -27,17 +28,41 @@ Data for this study came from a clinical trial for the drug triUmpsal.
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
 
+The response variable analysis that I will be using is cat~cat because aids and the vaccine are in a categorical subgroup. Since the question about drug users, we have to subset the data to include only drug users.
+
+Graphical display: bar chart, numerical display, and the inferential way is a chi square test.
+
 # Results
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
+```{r}
+DruggieData = filter(triUmp, DrugUser == "yes")
+```
+
 
 ## Descriptive Results
 
-### Graphical Descriptive Results
 
+### Graphical Descriptive Results
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question. Bottom line is to explain the features of the graph that are relevant to conforming or departing to what is expected by your null hypothesis !-->
 
+```{r}
+barchartGC(~infected+treatment,data=DruggieData)
+barchartGC(~infected+treatment,data=DruggieData, type="percent")
+
+```
+
+The graph shows that the people that did not get aids there is no difference between the people who took drug and placebo. It also shows that among the people who did get aids, there is a less amount of people who consumed the drugs that were infected by aids than the ones who took the placebo. 
+
 ### Numerical Descriptive Results
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=DruggieData)
+rowPerc(table1)
+colPerc(table1)
+```
+
+Among those who got aids, the ones who received the placebo had a significant higher amount of people are infected with aids than those who received the drug. 
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
